@@ -14,7 +14,7 @@ import * as employeeSchema from '../employees/schema';
           connectionString: configService.getOrThrow('DATABASE_URL'),
         });
         return drizzle(pool, {
-          schema: {  ...employeeSchema },
+          schema: { ...employeeSchema },
         });
       },
       inject: [ConfigService],
